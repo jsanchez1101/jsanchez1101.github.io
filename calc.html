@@ -6,29 +6,41 @@
     table, th {
       border: 3px solid #FFFF;
       border-collapse: collapse;
+      margin: 0 auto; /* Center the table */
     }
     th, td { 
       padding: 12px;
     }
     h2 {
       color: #FFFF;
-      text-align: center; 
+      text-align: center; /* Centering the title */
+      margin-top: 20px; /* Add space at the top */
     }
     body {
       background-color: #99CDFF;
       color: #FFFF;
+      margin: 0;
+      padding: 0;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
       height: 100vh;
-      margin: 0;
     }
     .calculator-container {
-      text-align: center;
+      margin-top: 50px; /* Move the calculator up */
     }
     input[type="text"] {
       font-family: "Courier New", Courier, monospace;
       font-size: 20px;
+    }
+    .buttons-container {
+      text-align: center; /* Centering the buttons */
+    }
+    input[type="button"] {
+      width: 50px;
+      height: 40px;
+      font-size: 18px;
+      margin: 5px;
     }
   </style>
   <script>
@@ -62,17 +74,17 @@
   <h2>Simple Calculator</h2>
   <div class="calculator-container">
     <form name="form1">
-      <table width="400" align="center">
+      <table width="400">
         <tr>
-          <b><td>Enter first number:</td>
+          <td>Enter first number:</td>
           <td><input type="text" name="txtNum1" size="5"></td>
         </tr>
         <tr>
           <td>Enter second number:</td>
-          <td><input type="text" name="txtNum2" size="5"></td></b>
+          <td><input type="text" name="txtNum2" size="5"></td>
         </tr>
-        <tr>
-          <td>
+        <tr class="buttons-container">
+          <td colspan="2">
             <input type="button" value="+" onclick="add()">
             <input type="button" value="-" onclick="sub()">
             <input type="button" value="*" onclick="mul()">
