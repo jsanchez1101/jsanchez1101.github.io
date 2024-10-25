@@ -11,13 +11,25 @@
       padding: 12px;
     }
     h2 {
-  color: #FFFF;
-}
+      color: #FFFF;
+      text-align: center; /* Centering the title */
+    }
     body {
       background-color: #99CDFF;
-      color : #FFFF;
+      color: #FFFF;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
     }
-    
+    .calculator-container {
+      text-align: center;
+    }
+    input[type="text"] {
+      font-family: "Courier New", Courier, monospace;
+      font-size: 20px;
+    }
   </style>
   <script>
     function add() {
@@ -47,30 +59,32 @@
 </head>
 
 <body>
-  <h2>Simple Calculator</h2>
-  <form name="form1">
-    <table width="400">
-      <tr>
-        <td>Enter first number:</td>
-        <td><input type="text" name="txtNum1" size="5"></td>
-      </tr>
-      <tr>
-        <td>Enter second number:</td>
-        <td><input type="text" name="txtNum2" size="5"></td>
-      </tr>
-      <tr>
-        <td>
-          <input type="button" value="+" onclick="add()">
-          <input type="button" value="-" onclick="sub()">
-          <input type="button" value="*" onclick="mul()">
-          <input type="button" value="/" onclick="div()">
-        </td>
-      </tr>
-      <tr>
-        <td>Result:</td>
-        <td><input type="text" name="txtSum" size="8"></td>
-      </tr>
-    </table>
-  </form>
+  <div class="calculator-container">
+    <h2>Simple Calculator</h2>
+    <form name="form1">
+      <table width="400" align="center">
+        <tr>
+          <td>Enter first number:</td>
+          <td><input type="text" name="txtNum1" size="5"></td>
+        </tr>
+        <tr>
+          <td>Enter second number:</td>
+          <td><input type="text" name="txtNum2" size="5"></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="button" value="+" onclick="add()">
+            <input type="button" value="-" onclick="sub()">
+            <input type="button" value="*" onclick="mul()">
+            <input type="button" value="/" onclick="div()">
+          </td>
+        </tr>
+        <tr>
+          <td>Result:</td>
+          <td><input type="text" name="txtSum" size="8"></td>
+        </tr>
+      </table>
+    </form>
+  </div>
 </body>
 </html>
